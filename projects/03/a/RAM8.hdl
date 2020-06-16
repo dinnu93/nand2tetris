@@ -15,5 +15,6 @@ CHIP RAM8 {
     OUT out[16];
 
     PARTS:
-    // Put your code here:
+    Mux8Way16(sel=address[3], out=reg);
+    Register(in=in, load=load, out=out);
 }
